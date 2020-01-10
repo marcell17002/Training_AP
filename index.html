@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Angkasa Pura 1
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+        }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+    // Load google charts
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    // Draw the chart and set the chart values
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['Work', 8],
+      ['Eat', 2],
+      ['TV', 4],
+      ['Gym', 2],
+      ['Sleep', 8]
+    ]);
+    
+      // Optional; add a title and set the width and height of the chart
+      var options = {'title':'Rekap Assesment ', 'width':550, 'height':400};
+    
+      // Display the chart inside the <div> element with id="piechart"
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+      chart.draw(data, options);
+    }
+    </script>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <div class="row">
+            <div class="col-md-6 col-xs-6 col-sm-6">
+                <div class="logo">
+                <img src="assets/pict/logo.png" style="width: 137px ; height : 46px;">
+                </div>
+            </div> 
+            <div class="col-md-6 col-xs-6 col-sm-6">
+                <div class="menutop">
+                    <a href="#home">Home</a>
+                    <a href="#news">Articles</a>
+                    <a href="#contact">Notes</a>
+                    <a href="question.html">Q & A</a>
+                    <a href="#apps">More Apps</a>
+                    <a href="#signout">Sign Out</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-4 col-sm-4">
+                <div class="home">
+                    <h1 style = "color: #1b294a;font-size: 80px;"> Welcome </h1>
+                    <h3 style = "color: #ffc05e;font-size: 35px;"> Marcell Antonius</h3>
+                </div>
+            </div>
+            <div class="col-md-8 col-xs-8 col-sm-8">
+                <div class="homepic">
+                    <img src="assets/pict/teamwork.png" style="width: 810px ; height : 534;">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="piechart">
+
+    </div>
+    <div id="tabel">
+        <h3 style="color: #1b294a; margin-left : 40px;">Rekap Hasil Assesment</h3><br>
+        <div class="tabel1">
+            
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                </tr>
+                <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                </tr>
+                <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <!-- <div class="logoaja">
+            <img src="assets/pict/logoaja1.png" style="width: 180px ; height : 100px;">	
+        </div> -->
+
+    </body>
+    <footer>
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-4 col-sm-4">
+                        <img src="assets/pict/logoname.png" style="width: 200px ; height : 90px;margin-top: 30px;">
+                    </div>
+                    <div class="col-md-8 col-xs-8 col-sm-8">
+                        <h4><b>PT Angkasa Pura I (Persero)</b></h1>
+                        <h5>Kota Baru Bandar Kemayoran Blok B12 Kav.2</h5>
+                        <h5>Jakarta Pusat, DKI Jakarta - Indonesia</h5>
+                        <h5>Telp.+62-21 6541961</h5>
+                        <h5>Faks. +62-21 6541514</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <br>
+                    <h6 style="color: #c4c4c4; text-align: center">copyright 2019 | Angkasa Pura 1 </h6>
+                </div>
+        </div>
+    </footer>
+</html>

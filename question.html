@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Angkasa Pura 1
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/question.css">
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+        }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+    // Load google charts
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    // Draw the chart and set the chart values
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['Work', 8],
+      ['Eat', 2],
+      ['TV', 4],
+      ['Gym', 2],
+      ['Sleep', 8]
+    ]);
+    
+      // Optional; add a title and set the width and height of the chart
+      var options = {'title':'Rekap Assesment ', 'width':550, 'height':400};
+    
+      // Display the chart inside the <div> element with id="piechart"
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+      chart.draw(data, options);
+    }
+    </script>
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById("menutop");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+        </script>
+        
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <div class="row">
+            <div class="col-md-6 col-xs-6 col-sm-6">
+                <div class="logo">
+                <img src="assets/pict/logo.png" style="width: 137px ; height : 46px;">
+                </div>
+            </div> 
+            <div class="col-md-6 col-xs-6 col-sm-6">
+                <div class="menutop">
+                    <a href="#home">Home</a>
+                    <a href="#news">Articles</a>
+                    <a href="#contact">Notes</a>
+                    <a href="question.html">Q & A</a>
+                    <a href="#apps">More Apps</a>
+                    <a href="#signout">Sign Out</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+             </div>
+        </div>
+    </div>
+    <div class="formtanya">
+        <form method="post" name="login_form" action="index.html">
+            <h4>Title</h4>
+            <input type="text" name="title" placeholder="Title" style="width: 270px;">
+            <h4>Question</h4>
+            <textarea type="text" name="question" placeholder="Your Question" style="width: 700px; height: 300px;"></textarea>
+            <br>
+            <input type="Submit" value="Log In" style="background-color: #ffc05e; color : #1b294a ;font-size: 16px; width: 100px;border-radius: 5px;margin-left: 15px;">
+        </form>
+    </div>
+    </div>
+    </body>
+
+    <footer>
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-4 col-sm-4">
+                        <img src="assets/pict/logoname.png" style="width: 200px ; height : 90px;margin-top: 30px;">
+                    </div>
+                    <div class="col-md-8 col-xs-8 col-sm-8">
+                        <h4><b>PT Angkasa Pura I (Persero)</b></h1>
+                        <h5>Kota Baru Bandar Kemayoran Blok B12 Kav.2</h5>
+                        <h5>Jakarta Pusat, DKI Jakarta - Indonesia</h5>
+                        <h5>Telp.+62-21 6541961</h5>
+                        <h5>Faks. +62-21 6541514</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <br>
+                    <h6 style="color: #c4c4c4; text-align: center">copyright 2019 | Angkasa Pura 1 </h6>
+                </div>
+        </div>
+    </footer>
+</html>
